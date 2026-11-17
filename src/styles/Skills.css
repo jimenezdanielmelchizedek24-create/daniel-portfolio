@@ -1,0 +1,593 @@
+
+/* =========================================
+   SKILLS SECTION
+========================================= */
+
+.skills-section {
+    position: relative;
+    width: 100%;
+    padding: 120px 10%;
+    background-color: #101010;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.skills-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.skills-label {
+    color: #F28C28;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.skills-header h2 {
+    margin: 0;
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.skills-header h2 span,
+.tech-stack-header h3 span {
+    color: #F28C28;
+}
+
+.skills-intro {
+    max-width: 300px;
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.9;
+    padding-bottom: 5px;
+}
+
+
+/* =========================================
+   SKILL CARDS GRID
+========================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.skill-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 420px;
+    padding: 35px;
+
+    background: linear-gradient(
+        145deg,
+        #1B1B1B,
+        #151515
+    );
+
+    border: 1px solid #303030;
+
+    transition:
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.skill-card:last-child {
+    grid-column: 1 / -1;
+    min-height: 350px;
+}
+
+.skill-card:hover {
+    border-color: #F28C28;
+    transform: translateY(-5px);
+
+    background: linear-gradient(
+        145deg,
+        #22201D,
+        #151515
+    );
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.skill-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.skill-number {
+    color: #F28C28;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.skill-icon {
+    color: #F28C28;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.skill-card-content h3 {
+    color: #FFFFFF;
+    font-size: clamp(17px, 2vw, 23px);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.skill-card-content h4 {
+    margin-top: 10px;
+    color: #F28C28;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.skill-card-content p {
+    max-width: 450px;
+    margin-top: 18px;
+    margin-bottom: 25px;
+
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   SKILL TAGS
+========================================= */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 9px;
+
+    margin-top: auto;
+    margin-bottom: 35px;
+}
+
+.skill-tags span {
+    display: inline-flex;
+    align-items: center;
+
+    max-width: 100%;
+    padding: 10px 13px;
+
+    background-color: #252525;
+    border: 1px solid #383838;
+
+    color: #BBBBBB;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.skill-tags span:hover {
+    background-color: #F28C28;
+    border-color: #F28C28;
+    color: #101010;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.skill-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 18px;
+    border-top: 1px solid #333333;
+
+    color: #777777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.skill-card-footer span:last-child {
+    color: #F28C28;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   TECHNOLOGY STACK
+========================================= */
+
+.tech-stack-section {
+    margin-top: 120px;
+}
+
+.tech-stack-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.tech-stack-header h3 {
+    color: #FFFFFF;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.tech-stack-header > p {
+    max-width: 260px;
+    color: #888888;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   TECHNOLOGY GRID
+========================================= */
+
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    border-top: 1px solid #333333;
+    border-left: 1px solid #333333;
+}
+
+.tech-item {
+    min-width: 0;
+    min-height: 110px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #151515;
+
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+
+    transition: background-color 0.3s ease;
+}
+
+.tech-item:hover {
+    background-color: #22201D;
+}
+
+.tech-index {
+    color: #777777;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.tech-name {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+
+    transition: color 0.3s ease;
+}
+
+.tech-item:hover .tech-name {
+    color: #F28C28;
+}
+
+.tech-arrow {
+    align-self: flex-end;
+    color: #F28C28;
+    font-size: 15px;
+
+    opacity: 0;
+    transform: translate(-5px, 5px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.tech-item:hover .tech-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================
+   CLOSING STATEMENT
+========================================= */
+
+.skills-closing {
+    margin-top: 100px;
+    padding-top: 35px;
+    border-top: 1px solid #333333;
+}
+
+.skills-closing p {
+    margin: 0;
+    color: #777777;
+    font-size: clamp(18px, 3vw, 30px);
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.skills-closing span {
+    color: #F28C28;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .skills-section {
+        padding: 90px 8%;
+    }
+
+    .skills-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card,
+    .skill-card:last-child {
+        grid-column: auto;
+        min-height: auto;
+    }
+
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .skills-section {
+        padding: 75px 6%;
+    }
+
+    .skills-header {
+        margin-bottom: 45px;
+        gap: 18px;
+    }
+
+    .skills-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .skills-header h2 {
+        font-size: clamp(36px, 9vw, 46px);
+        letter-spacing: -2px;
+        line-height: 1.05;
+    }
+
+    .skills-intro {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .skills-grid {
+        gap: 15px;
+    }
+
+    .skill-card,
+    .skill-card:last-child {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .skill-card-top {
+        margin-bottom: 32px;
+    }
+
+    .skill-number {
+        font-size: 12px;
+    }
+
+    .skill-icon {
+        font-size: 27px;
+    }
+
+    .skill-card-content h3 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .skill-card-content h4 {
+        font-size: 11px;
+    }
+
+    .skill-card-content p {
+        font-size: 12px;
+        line-height: 1.8;
+        margin-top: 15px;
+        margin-bottom: 22px;
+    }
+
+    .skill-tags {
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .skill-tags span {
+        padding: 9px 10px;
+        font-size: 9px;
+        letter-spacing: 0.3px;
+    }
+
+    .skill-card-footer {
+        padding-top: 15px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    /* TECHNOLOGY STACK */
+
+    .tech-stack-section {
+        margin-top: 80px;
+    }
+
+    .tech-stack-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 28px;
+    }
+
+    .tech-stack-header h3 {
+        font-size: clamp(27px, 7vw, 34px);
+        letter-spacing: -1.5px;
+    }
+
+    .tech-stack-header > p {
+        font-size: 12px;
+    }
+
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tech-item {
+        min-height: 95px;
+        padding: 15px;
+    }
+
+    .tech-name {
+        font-size: 14px;
+    }
+
+    .tech-arrow {
+        opacity: 1;
+        transform: none;
+        font-size: 13px;
+    }
+
+    /* CLOSING STATEMENT */
+
+    .skills-closing {
+        margin-top: 70px;
+        padding-top: 28px;
+    }
+
+    .skills-closing p {
+        font-size: clamp(17px, 4.5vw, 23px);
+        letter-spacing: 0.5px;
+    }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .skills-header h2 {
+        font-size: 35px;
+    }
+
+    .skill-card,
+    .skill-card:last-child {
+        padding: 20px;
+    }
+
+    .skill-card-content h3 {
+        font-size: 17px;
+    }
+
+    .skill-tags span {
+        padding: 8px 9px;
+        font-size: 8px;
+    }
+
+    .tech-item {
+        min-height: 85px;
+        padding: 12px;
+    }
+
+    .tech-name {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .skill-card,
+    .skill-tags span,
+    .tech-item,
+    .tech-name,
+    .tech-arrow {
+        transition: none;
+    }
+
+    .skill-card:hover {
+        transform: none;
+    }
+
+}

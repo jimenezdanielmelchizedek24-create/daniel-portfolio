@@ -1,0 +1,511 @@
+
+.admin-dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #101010;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SIDEBAR */
+
+.dashboard-sidebar {
+    width: 250px;
+    min-height: 100vh;
+    padding: 35px 25px;
+    background: #151515;
+    border-right: 1px solid #292929;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.dashboard-logo {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 75px;
+}
+
+.dashboard-logo span,
+.dashboard-header h1 span {
+    color: #f28c28;
+}
+
+.sidebar-section-label,
+.dashboard-eyebrow {
+    color: #777;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sidebar-link {
+    margin-top: 20px;
+    padding: 15px;
+    color: #aaa;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.sidebar-link.active {
+    background: #25201b;
+    color: #f28c28;
+}
+
+.sidebar-link span {
+    margin-right: 12px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #303030;
+}
+
+.admin-avatar {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: #f28c28;
+    color: #101010;
+    font-weight: 800;
+    border-radius: 50%;
+}
+
+.admin-profile strong,
+.admin-profile small {
+    display: block;
+}
+
+.admin-profile strong {
+    font-size: 12px;
+}
+
+.admin-profile small {
+    margin-top: 5px;
+    color: #777;
+    font-size: 10px;
+}
+
+.logout-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #aaa;
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #f28c28;
+    border-color: #f28c28;
+}
+
+/* MAIN CONTENT */
+
+.dashboard-content {
+    width: calc(100% - 250px);
+    padding: 55px;
+    min-width: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard-header h1 {
+    margin: 15px 0 10px;
+    font-size: 48px;
+    letter-spacing: -2px;
+}
+
+.dashboard-header p {
+    color: #888;
+    font-size: 13px;
+}
+
+.refresh-button {
+    padding: 13px 18px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.refresh-button:hover {
+    border-color: #f28c28;
+    color: #f28c28;
+}
+
+/* STATISTICS */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 45px 0 65px;
+}
+
+.stat-card {
+    padding: 25px;
+    background: #181818;
+    border: 1px solid #292929;
+}
+
+.stat-card span {
+    color: #888;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 18px;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+/* MESSAGE TABLE */
+
+.messages-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.messages-heading h2 {
+    margin-top: 12px;
+    font-size: 22px;
+}
+
+.message-count {
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.messages-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #292929;
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.messages-table th {
+    padding: 18px;
+    background: #181818;
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.messages-table td {
+    padding: 20px 18px;
+    border-top: 1px solid #292929;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.messages-table tbody tr {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.messages-table tbody tr:hover {
+    background: #191919;
+}
+
+.messages-table td strong,
+.messages-table td small {
+    display: block;
+}
+
+.messages-table td strong {
+    color: #fff;
+    font-size: 12px;
+}
+
+.messages-table td small {
+    margin-top: 6px;
+    color: #777;
+    font-size: 10px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 9px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-badge.new {
+    color: #f28c28;
+    background: #302216;
+}
+
+.status-badge.read {
+    color: #75b8ed;
+    background: #192733;
+}
+
+.status-badge.archived {
+    color: #aaa;
+    background: #292929;
+}
+
+.view-button {
+    padding: 8px 10px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #f28c28;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.dashboard-empty {
+    padding: 55px 20px;
+    border: 1px solid #292929;
+    color: #888;
+    text-align: center;
+    font-size: 13px;
+}
+
+.dashboard-error {
+    margin-bottom: 15px;
+    color: #ff7777;
+    font-size: 13px;
+}
+
+/* MESSAGE DETAILS */
+
+.message-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.message-panel {
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 40px;
+    background: #171717;
+    border-left: 1px solid #333;
+}
+
+.message-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-panel-header button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.message-panel h2 {
+    margin: 40px 0;
+    font-size: 30px;
+    overflow-wrap: anywhere;
+}
+
+.message-information,
+.message-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px 0;
+    border-top: 1px solid #333;
+}
+
+.message-information span,
+.message-body span,
+.message-actions label {
+    color: #f28c28;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.message-information strong,
+.message-information p,
+.message-information a {
+    margin: 0;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.message-information a {
+    text-decoration: none;
+}
+
+.message-body p {
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.message-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.message-actions select {
+    padding: 13px;
+    background: #222;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.message-actions a {
+    padding: 14px;
+    background: #f28c28;
+    color: #101010;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.delete-message-button {
+    padding: 14px;
+    background: transparent;
+    border: 1px solid #873e3e;
+    color: #ff7777;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .dashboard-content {
+        padding: 35px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard-sidebar {
+        width: 65px;
+        padding: 25px 10px;
+    }
+
+    .dashboard-logo {
+        font-size: 18px;
+        writing-mode: vertical-rl;
+        margin-bottom: 45px;
+    }
+
+    .sidebar-section-label,
+    .sidebar-link:not(.active) {
+        display: none;
+    }
+
+    .sidebar-link {
+        padding: 12px 8px;
+        font-size: 0;
+    }
+
+    .sidebar-link span {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .admin-profile {
+        justify-content: center;
+    }
+
+    .admin-profile > div:last-child {
+        display: none;
+    }
+
+    .logout-button {
+        font-size: 0;
+        text-align: center;
+    }
+
+    .logout-button::after {
+        content: "↗";
+        font-size: 16px;
+    }
+
+    .dashboard-content {
+        width: calc(100% - 65px);
+        padding: 25px 15px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 35px;
+    }
+
+    .dashboard-header p {
+        font-size: 11px;
+    }
+
+    .dashboard-stats {
+        gap: 10px;
+        margin: 30px 0 45px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card strong {
+        font-size: 28px;
+    }
+
+    .messages-heading {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .messages-table {
+        min-width: 650px;
+    }
+
+    .message-panel {
+        padding: 25px;
+    }
+}
